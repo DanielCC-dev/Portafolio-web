@@ -1,7 +1,8 @@
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .timeline {
         margin: 50px auto;
     }
+
     .timeline::after {
         left: 31px;
     }
@@ -12,7 +13,7 @@
         padding-right: 20px;
     }
 
-    .text-box small{
+    .text-box small {
         margin-bottom: 10px;
     }
 
@@ -20,34 +21,36 @@
         left: 0;
     }
 
-    .left-contentBox-arrow, .right-contentBox-arrow {
+    .left-contentBox-arrow,
+    .right-contentBox-arrow {
         border-right: 15px solid #0082fb;
         border-left: 0;
         left: -15px;
-    } 
+    }
 
-    h1{
+    h1 {
         font-size: 3.3rem;
     }
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
 
     #inicio {
         background: linear-gradient(to right, var(--bg-100) 50%, var(--primary-300) 50%);
     }
-    
+
     .img-content {
         left: 50%;
     }
+
     .typewrite-text {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-@media screen and (max-width: 385px){
-    h1{
+@media screen and (max-width: 385px) {
+    h1 {
         font-size: 2.5rem;
     }
 
@@ -55,7 +58,39 @@
         left: 50%;
     }
 
-    h3{
+    h3 {
         font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .redes .glass {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 140px;
+        height: 160px;
+    }
+
+    .redes {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 552px) {
+    .redes .glass {
+        width: 100px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #inicio h2{
+        font-size: 1.6rem;
+    }
+
+    #sobremi p{
+        text-align: justify;
     }
 }

@@ -449,7 +449,6 @@ select:focus {
     font-size: 3rem;
 }
 
-/* From Uiverse.io by codebykay101 */
 .redes {
     position: relative;
     display: flex;
@@ -461,7 +460,7 @@ select:focus {
     position: relative;
     width: 180px;
     height: 200px;
-    background: linear-gradient(#fff2, transparent);
+    background: linear-gradient(var(--accent-300), transparent);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -476,7 +475,7 @@ select:focus {
 
 .redes:hover .glass {
     transform: rotate(0deg);
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 .redes .glass::before {
