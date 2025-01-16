@@ -511,7 +511,7 @@ select:focus {
 /* Barra */
 
 #sideNavButton {
-    position: fixed;
+    /* position: fixed; */
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
