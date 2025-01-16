@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "Eynol",
+        "descripcion": "Página web de la empresa Eynol, dedicada a la venta de maquinaria.",
+        "tecnologias": ["Angular", "TypeScript", "HTML/CSS", "Bootstrap", "NodeJS"],
+        "imagen": "/public/proyectos/eynol.png",
+        "url": "https://eynol.com"
+    },
+    {
+        "nombre": "RacoOn",
+        "descripcion": "Aplicación web que permite gestionar tareas en grupos y planificar presupuestos.",
+        "tecnologias": ["HTML/CSS", "JavaScript", "Bootstrap", "Firebase"],
+        "imagen": "/public/proyectos/racoon.png",
+        "url": "https://racoon-on.netlify.app/"
+    },
+    {
+        "nombre": "CodeGuard",
+        "descripcion": "Creada con Angular, esta página es un generador de contraseñas seguras. Cuenta con información adicional sobre la importancia de tener una contraseña segura.",
+        "tecnologias": ["Angular", "TypeScript", "HTML/CSS", "Bootstrap"],
+        "imagen": "/public/proyectos/codeguard.png",
+        "url": "https://codeguard.netlify.app/"
+    },
+    {
+        "nombre": "FAKE ISIL",
+        "descripcion": "Esta es una versión fake de la página web de ISIL, propone un diseño responsivo y aplicable a  otras webs.",
+        "tecnologias": ["HTML/CSS", "JavaScript", "Bootstrap"],
+        "imagen": "/public/proyectos/fake-isil.png",
+        "url": "https://fake-isil-web.netlify.app/"
+    }
+]

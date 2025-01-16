@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Estilo de la página -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Estilo responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Icono de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Icons de DevIcons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Titulo de la página -->
+    <title>DanielC</title>
+</head>
+
+<body>
+    <!-- Inicio -->
+    <section id="inicio">
+        <div class="container d-flex align-items-center">
+            <div class="text-content col-12 col-lg-6 text-center text-lg-start" id="intro">
+                <div class="">
+                    <div class="typewrite-text">
+                        <div class="typewrite">
+                            <h1 class="">Daniel Carbone</h1>
+                        </div>
+                    </div>
+                </div>
+                <h2>Técnico en Desarrollo de Software</h2>
+                <div class="mt-3">
+                    <a href="cv/Daniel Carbone Campoverde - CV.docx" class="btn btn-primary btn-lg" download>
+                        Descargar CV
+                    </a>
+                </div>
+            </div>
+            <div class="img-content col-12 col-lg-6">
+                <img src="public/yo_sf.png" class="img-fluid" alt="Daniel Carbone">
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos">
+        <div class="container text-center">
+            <h2>Mis proyectos</h2>
+            <h4>Transformando <span class="marked"> ideas </span> en realidad
+                <span class="marked">digital </span>
+            </h4>
+            <div class="my-3 mx-auto col-10 col-md-6">
+                <select id="techDropdown" class="form-select" onchange="filterProjectsByTechnology(this.value)">
+                    <!-- <option value="" selected>Todos</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="HTML">HTML/CSS</option>
+                    <option value="Firebase">Firebase</option>
+                    <option value="Node.js">Node.js</option> -->
+                </select>
+            </div>
+
+            <br>
+            <div id="pryContainer" class="row g-3">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline">
+        <h2 class="text-center">Estudios y Experiencia Laboral</h2>
+        <h4 class="text-center">Mi<span class="marked"> trayectoria </span>en el mundo del<span class="marked"> software
+            </span>
+        </h4>
+        <div class="timeline">
+            <div class="contentBox left-contentBox">
+                <div class="text-box">
+                    <h3>ISIL - Carrera Técnica en Desarrollo de Software</h3>
+                    <small>2022 - 2024</small>
+                    <p>Comencé mi formación técnica en desarrollo de software.</p>
+                    <span class="left-contentBox-arrow"></span>
+                </div>
+            </div>
+            <div class="contentBox right-contentBox">
+                <div class="text-box">
+                    <h3>ISIL - Certificado Modular en Tecnologías de Desarrollo de Software</h3>
+                    <small>Julio 2023</small>
+                    <br>
+                    <a href="https://drive.google.com/file/d/10KHW0lFDmI0-ejImL6-WKHE2WBIRoJxA/view?usp=sharing"
+                        target="_blank" class="mt-2">Ver Certificado <i class="bi bi-box-arrow-in-up-right"></i></a>
+                    <span class="right-contentBox-arrow"></span>
+                </div>
+            </div>
+            <div class="contentBox left-contentBox">
+                <div class="text-box">
+                    <h3>ISIL - Certificado Modular en Análisis y Diseño de Sistemas de Información</h3>
+                    <small>Julio 2024</small>
+                    <br>
+                    <a href="https://drive.google.com/file/d/1xa-EPmdx-57YbVxJh9yjewn7eCkdvHfF/view?usp=sharing"
+                        target="_blank" class="mt-2">Ver Certificado <i class="bi bi-box-arrow-in-up-right"></i></a>
+                    <span class="left-contentBox-arrow"></span>
+                </div>
+            </div>
+            <div class="contentBox right-contentBox">
+                <div class="text-box">
+                    <h3>ISIL - Certificado Modular en Despliegue y Calidad de Sistemas de Información</h3>
+                    <small>Diciembre 2024</small>
+                    <br>
+                    <a href="https://drive.google.com/file/d/1qrgFnFEsZ-_dpht8TZp7FZ7XLcvatgos/view?usp=sharing"
+                        target="_blank" class="mt-2">Ver Certificado <i class="bi bi-box-arrow-in-up-right"></i></a>
+                    <span class="right-contentBox-arrow"></span>
+                </div>
+            </div>
+            <div class="contentBox left-contentBox">
+                <div class="text-box">
+                    <h3>Eynol - Trabajo como autónomo</h3>
+                    <small>Enero 2025</small>
+                    <br>
+                    <p>Desarrollé el sitio web de Eynol, contando con un diseño amigable y responsivo.</p>
+                    <a href="https://eynol.com" target="_blank" class="mt-2">Ver Web <i
+                            class="bi bi-box-arrow-in-up-right"></i></a>
+                    <span class="left-contentBox-arrow"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+        <div class="container">
+            <h2 class="text-center">Habilidades</h2>
+            <!-- <h4 class="text-center">Mis <span class="marked"> conocimientos </span> y <span class="marked"> habilidades -->
+            </span>
+            <div class="row">
+                <!-- Lenguajes -->
+                <div class="col-12 col-md-6 my-4">
+                    <div class="skills h-100">
+                        <h3>Lenguajes</h3>
+                        <i class="devicon-typescript-plain icon" title="TypeScript"></i>
+                        <i class="devicon-html5-plain-wordmark icon" title="HTML"></i>
+                        <i class="devicon-css3-plain-wordmark icon" title="CSS"></i>
+                        <i class="devicon-javascript-plain icon" title="JavaScript"></i>
+                        <i class="devicon-csharp-plain icon" title="C#"></i>
+                        <i class="devicon-php-plain icon" title="PHP"></i>
+                    </div>
+                </div>
+
+                <!-- Frameworks y bibliotecas -->
+                <div class="col-12 col-md-6 my-4">
+                    <div class="skills h-100">
+                        <h3>Frameworks y bibliotecas</h3>
+                        <i class="devicon-angularjs-plain icon" title="Angular"></i>
+                        <i class="bi bi-bootstrap icon" title="Bootstrap"></i>
+                        <i class="devicon-spring-original-wordmark icon" title="Spring"></i>
+                        <i class="devicon-dotnetcore-plain icon" title=".NET Core"></i>
+                        <i class="devicon-react-original icon" title="React"></i>
+                        <i class="devicon-nodejs-plain-wordmark icon" title="Node.js"></i>
+                    </div>
+                </div>
+
+                <!-- Bases de datos -->
+                <div class="col-12 col-md-6 my-4">
+                    <div class="skills h-100">
+                        <h3>Bases de datos</h3>
+                        <i class="devicon-mysql-plain-wordmark icon" title="MySQL"></i>
+                        <i class="devicon-microsoftsqlserver-plain-wordmark icon" title="Microsoft SQL Server"></i>
+                        <i class="devicon-mariadb-original-wordmark icon" title="MariaDB"></i>
+                        <i class="devicon-mongodb-plain-wordmark icon" title="MongoDB"></i>
+                        <i class="devicon-firebase-plain-wordmark icon" title="Firebase"></i>
+                    </div>
+                </div>
+
+                <!-- Herramientas adicionales -->
+                <div class="col-12 col-md-6 my-4">
+                    <div class="skills h-100">
+                        <h3>Herramientas adicionales</h3>
+                        <i class="devicon-github-original icon" title="GitHub"></i>
+                        <i class="devicon-eclipse-plain-wordmark icon" title="Eclipse"></i>
+                        <i class="devicon-visualstudio-plain icon" title="Visual Studio"></i>
+                        <i class="devicon-vscode-plain-wordmark icon" title="Visual Studio Code"></i>
+                        <i class="devicon-androidstudio-plain icon" title="Android Studio"></i>
+                        <i class="bi bi-git icon" title="Git"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mi -->
+    <section id="sobremi">
+        <div class="container">
+            <h2 class="text-center">Sobre mí</h2>
+            <p> Mi nombre es <span class="marked">Daniel Carbone</span>, técnico en Desarrollo de Software, egresado de
+                ISIL en Perú. Me interesé en la programación desde el colegio y ahora me encuentro feliz ejerciendo esta
+                profesión.
+                <br> <br>
+                Durante mi trayectoria, he trabajado en proyectos de desarrollo web, como trabajos y proyectos de mi
+                instituto, destacando mi último trabajo como autónomo en Eynol. Soy una persona comprometida con el
+                éxito de
+                los proyectos en los que participo, y personalmente busco constantemente oportunidades para demostrar
+                y mejorar mis habilidades.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <div class="container">
+            <h2 class="text-center">Contáctame!</h2>
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="text-center">Gracias por leer hasta aquí. Si deseas buscas a un programador comprometido
+                        y con ganas de crecer
+                        junto a tu equipo,
+                        no dudes en escribirme a través de los siguientes medios:</h4>
+                    <!-- <div class="row links my-5">
+                        <div class="col-12 col-md-6">
+                            <a href="https://wa.link/kh0ykf" target="_blank" rel="noopener noreferrer" class="mt-2 mx-auto d-flex align-items-center justify-content-center">
+                                <i class="bi bi-whatsapp me-2"></i> (+51) 941 139 664
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <a href="mailto:danielcarbone2n@gmail.com" target="_blank" rel="noopener noreferrer"
+                            class="mt-2 mx-auto d-flex align-items-center justify-content-center"">
+                            <i class="bi bi-envelope me-2"></i> danielcarbone2n@gmail.com
+                        </a>
+                        </div>
+                    </div> -->
+                    <div class="redes mt-5">
+                        <div data-text="Whatsapp" style="--r:-15;" class="glass">
+                            <a href="https://wa.link/kh0ykf" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-whatsapp me-2"></i>
+                            </a>
+                        </div>
+                        <div data-text="Instagram" style="--r:-5;" class="glass">
+                            <a href="https://www.instagram.com/daniel_cc___/" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-instagram me-2"></i>
+                            </a>
+                        </div>
+                        <div data-text="Gmail" style="--r:5;" class="glass">
+                            <a href="mailto:danielcarbone2n@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-envelope me-2"></i>
+                            </a>
+                        </div>
+                        <div data-text="Github" style="--r:20;" class="glass">
+                            <a href="https://github.com/DanielCC-dev" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github me-2"></i>
+                            </a>
+                        </div>
+                        <div data-text="LinkedIn" style="--r:25;" class="glass">
+                            <a href="mailto:danielcarbone2n@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-linkedin me-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="piepagina">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center d-flex align-items-center justify-content-center">
+                    <h3>Desarrollado por <span class="marked">DanielC</span></h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="sideNavButton" onclick="toggleSideNav()">
+        <i class="bi bi-list"></i>
+    </div>
+
+    <div id="sideNav" class="side-nav">
+        <div class="close-btn my-2" onclick="toggleSideNav()">
+            <i class="bi bi-x-lg"></i>
+        </div>
+        <button class="nav-item mt-4" onclick="scrollToSection('inicio')">Inicio</button>
+        <button class="nav-item" onclick="scrollToSection('proyectos')">Proyectos</button>
+        <button class="nav-item" onclick="scrollToSection('timeline')">Experiencia</button>
+        <button class="nav-item" onclick="scrollToSection('habilidades')">Habilidades</button>
+        <button class="nav-item" onclick="scrollToSection('sobremi')">Sobre mí</button>
+        <button class="nav-item mb-4" onclick="scrollToSection('contacto')">Contacto</button>
+        <div class="icon-nav mx-auto my-2">
+            <a href="https://wa.link/kh0ykf" target="_blank" class="icon"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/danielc-dev/" target="_blank" class="icon"><i
+                    class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/daniel_cc___/" target="_blank" class="icon"><i
+                    class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+
+
+
+    <!-- Script de la página -->
+    <script src="js/main.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    /* Colores principales */
+    --primary-100: #0082fb;
+    --primary-200: #006bcc;
+    --primary-300: #004586;
+
+    /* Colores de acento */
+    --accent-100: #575757;
+    --accent-200: #4A4A4A;
+    --accent-300: #333;
+
+    /* Colores del texto */
+    --text-100: #ffffff;
+    --text-200: #d9d9d9;
+    --text-300: #b3b3b3;
+
+    /* Colores de fondo */
+    --bg-100: #0b0a1f;
+    --bg-200: #16152e;
+    --bg-300: #1e1d40;
+
+    /* Fuentes */
+    --font-family: "Pridi", sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-100);
+    color: var(--text-100);
+}
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+/* body::-webkit-scrollbar-track {
+    background: transparent;
+} */
+
+/* body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 20px;
+    border: 3px solid orange;
+} */
+
+h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--bg-200);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+a:hover {
+    color: var(--text-100);
+}
+
+/* Texto resaltado */
+.marked {
+    color: var(--primary-100);
+}
+
+small {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+section {
+    padding: 100px 0px;
+}
+
+select {
+    color: var(--text-100) !important;
+    background: var(--primary-300) !important;
+}
+
+select:focus {
+    border: 1px solid var(--primary-200);
+    box-shadow: var(--primary-100) 0px 0px 5px;
+}
+
+.btn-primary {
+    background-color: var(--bg-100);
+    color: var(--primary-100);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-100);
+    color: var(--text-100);
+}
+
+/* Inicio */
+#inicio {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, var(--bg-100) 60%, var(--primary-200) 40%);
+    color: var(--text-100);
+}
+
+.img-content {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.img-content img {
+    /* max-height: 800px; */
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+}
+
+#intro {
+    z-index: 2;
+}
+
+.typewrite {
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid var(--text-100);
+    animation: typing 5s steps(15) forwards, blink 0.6s step-end infinite;
+}
+
+.typewrite-text {
+    width: fit-content;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+
+/* Proyectos */
+#proyectos,
+#contacto {
+    background-color: var(--bg-200);
+}
+
+#proyectos h3,
+#proyectos p {
+    color: var(--text-100);
+}
+
+.go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: var(--bg-200);
+    border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+}
+
+.card {
+    display: block;
+    position: relative;
+    background-color: var(--primary-200);
+    border-radius: 10px;
+    padding: 2em 1.2em;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background: var(--bg-100);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(to bottom, var(--bg-200), var(--primary-100));
+
+    height: 10px;
+    width: 10px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.35s ease-out;
+}
+
+.card:hover:before {
+    transform: scale(200);
+}
+
+.card:hover .bg-primary {
+    background: var(--bg-300) !important;
+}
+
+.badge {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Timeline  */
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.contentBox {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown linear forwards;
+    animation-timeline: view();
+    opacity: 0;
+}
+
+@keyframes movedown {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.contentBox:nth-child(1) {
+    animation-range: entry 0% cover 10%;
+}
+
+.contentBox:nth-child(2) {
+    animation-range: entry 10% cover 15%;
+}
+
+.contentBox:nth-child(3) {
+    animation-range: entry 15% cover 25%;
+}
+
+.contentBox:nth-child(4) {
+    animation-range: entry 25% cover 30%;
+}
+
+.contentBox:nth-child(5) {
+    animation-range: entry 30% cover 40%;
+}
+
+.text-box {
+    padding: 20px 30px;
+    background: var(--primary-200);
+    position: relative;
+    border-radius: 10px;
+}
+
+.left-contentBox {
+    left: 0;
+}
+
+.right-contentBox {
+    left: 50%;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-100), var(--text-300));
+    left: 50%;
+    top: 0;
+    margin-left: -3px;
+    z-index: 1;
+    animation: moveline linear forwards;
+    animation-range: entry 20% cover 100%;
+    animation-timeline: view();
+    /* scroll(root block) */
+}
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.left-contentBox-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid var(--primary-100);
+    right: -15px;
+}
+
+.right-contentBox-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid var(--primary-100);
+    left: -14px;
+}
+
+/* Skills */
+
+#habilidades {
+    background-color: var(--bg-200);
+    text-align: center;
+}
+
+#habilidades h3 {
+    margin-bottom: 1rem;
+}
+
+.icon {
+    font-size: 3rem;
+    margin: 5px;
+    color: var(--text-200);
+}
+
+.skills {
+    padding: 30px;
+    gap: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 3;
+    background: var(--bg-200);
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, var(--primary-300), #368ddf, var(--primary-300));
+    z-index: -1;
+    background-size: 400% 400%;
+    animation: gradient-border 4.5s ease infinite;
+}
+
+@keyframes gradient-border {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Contacto */
+
+.links a {
+    font-size: 1.6rem;
+    color: var(--primary-100);
+}
+
+.links a:hover {
+    color: var(--text-100);
+}
+
+.links i {
+    font-size: 3rem;
+}
+
+/* From Uiverse.io by codebykay101 */
+.redes {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes .glass {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+}
+
+.redes:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 10px;
+}
+
+.redes .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.redes .glass a {
+    font-size: 2.5em;
+    color: var(--text-100);
+}
+
+
+
+/* Footer */
+#piepagina {
+    padding: 60px 0px;
+    background: var(--bg-100);
+}
+
+#piepagina a:hover {
+    color: var(--primary-200);
+}
+
+/* Barra */
+
+#sideNavButton {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--accent-200);
+    color: var(--text-100);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    animation: appear 1s normal;
+}
+
+@keyframes appear {
+    from {
+        left: -50px;
+    }
+
+    to {
+        left: 10px;
+    }
+}
+
+.side-nav {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: var(--accent-300);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+.side-nav .nav-item {
+    background: none;
+    border: none;
+    color: var(--text-100);
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.side-nav .nav-item:hover {
+    background-color: var(--accent-100);
+}
+
+.side-nav.active {
+    left: 0;
+}
+
+.icon-nav a {
+    font-size: 1.5rem;
+}
+
+.close-btn {
+    display: flex;
+    justify-content: center;
+    background: var(--accent-200);
+    padding: 10px 15px;
+    margin: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: var(--accent-100);
+}
