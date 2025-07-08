@@ -134,7 +134,7 @@ select:focus {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     background: linear-gradient(to right, var(--bg-100) 60%, var(--primary-200) 40%);
     color: var(--text-100);
@@ -150,7 +150,7 @@ select:focus {
 
 .img-content img {
     /* max-height: 800px; */
-    height: 100dvh;
+    height: 100vh;
     width: auto;
     object-fit: cover;
 }
